@@ -16,7 +16,7 @@ async function FetchCategories() {
   return (
     <ul>
       {response.data.data.map((option, index) => (
-        <li key={index} id={option.id}>==> {option.name}</li>
+        <li key={index} id={option.id}>== {option.name}</li>
       ))}
     </ul>
   )
@@ -29,7 +29,7 @@ async function FetchProducts() {
   return (
     <ul>
       {response.data.data.map((option, index) => (
-        <li key={index} id={option.id}><a href={option.id}>==> {option.name}</a></li>
+        <li key={index} id={option.id}><a href={option.id}>== {option.name}</a></li>
       ))}
     </ul>
   )
