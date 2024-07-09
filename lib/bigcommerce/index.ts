@@ -1,4 +1,4 @@
-import { isVercelCommerceError } from 'lib/type-guards';
+//import { isVercelCommerceError } from 'lib/type-guards';
 import { notFound } from 'next/navigation';
 import { NextRequest, NextResponse } from 'next/server';
 import { BIGCOMMERCE_GRAPHQL_API_ENDPOINT } from './constants';
@@ -123,13 +123,13 @@ export async function bigCommerceFetch<T>({
       body
     };
   } catch (e) {
-    if (isVercelCommerceError(e)) {
+    /*if (isVercelCommerceError(e)) {
       throw {
         status: e.status || 500,
         message: e.message,
         query
       };
-    }
+    }*/
 
     throw {
       error: e,
